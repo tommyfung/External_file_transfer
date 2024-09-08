@@ -1,0 +1,43 @@
+{
+    "get": {
+        "sftp": {
+            "hostname": "test.rebex.net",
+            "port": 22,
+            "username": "demo",
+            "password": "password",
+            "remote_path": "/pub/example/",
+            "files": ["readme.txt", "anotherfile.txt"]
+        },
+        "blob": {
+            "account_url": "https://rgdev8ba6.blob.core.windows.net",
+            "container_name": ""
+        },
+        "gcp": {
+            "bucket_name": "get-file-testingsftp"
+        }
+    },
+    "send": {
+        "sftp": {
+            "hostname": "usw2bdevhplussftp001.blob.core.windows.net",
+            "port": 22,
+            "username": "usw2bdevhplussftp001.hsiluser",
+            "password": "KyogRHdGHkdO5kaVcJ+kTByAxLkHOcp3",
+            "remote_path": "/hsil-input",
+			"proxy": {
+                "host": "your_proxy_host",
+                "port": 3128
+			}
+        },
+        "blob": {
+            "account_url": "https://rgdev8ba6.blob.core.windows.net",
+            "container_name": "",
+            "files": [""]
+        },
+        "gcp": {
+            "bucket_name": "get-file-testingsftp",
+            "service_account_json": "testinggcp-key.json",
+            "files": ["file1.txt", "file2.txt"]
+        }
+    },
+    "use": "gcp" 
+}

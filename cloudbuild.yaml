@@ -1,0 +1,5 @@
+steps:
+- name: 'gcr.io/cloud-builders/gcloud'
+  args: ['builds', 'submit', '--tag', 'gcr.io/spheric-crowbar-433702-g7/my-python-app']
+- name: 'gcr.io/cloud-builders/gcloud'
+  args: ['run', 'deploy', 'my-python-app', '--image', 'gcr.io/spheric-crowbar-433702-g7/my-python-app', '--platform', 'managed']
